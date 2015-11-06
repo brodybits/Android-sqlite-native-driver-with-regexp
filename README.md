@@ -1,4 +1,4 @@
-# Android sqlite native driver
+# Android sqlite native driver with REGEXP support
 
 Provides a native build of sqlite with a low-level interface for Android libraries.
 
@@ -13,6 +13,8 @@ License: UNLICENSE (public domain).
 Android-sqlite-native-driver provides:
 - single `SQLiteNative` class with native Java interface to _an important_ subset of sqlite C functions
 - automatic build of `sqlite-native-driver-libs.zip`, with native sqlite library build for major Android targets (`armeabi`, `armeabi-v7a`, `x86`, `x86_64`) that is accessible from the native Java interface
+
+This version uses the public-domain `regex` library code by Ozan ("oz") Yigit from http://www.cs.yorku.ca/~oz/ to provide the REGEXP function (with locking since the public-domain `regex` library is NOT thread-safe).
 
 This is accomplished by using [GlueGen](http://jogamp.org/gluegen/www/) around a simple wrapper C module.
 
